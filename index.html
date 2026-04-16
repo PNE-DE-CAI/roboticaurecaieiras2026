@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Robótica · Formação 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(145deg, #0a2f6c 0%, #041a3a 100%); min-height: 100vh; padding: 20px; color: #212121; }
+        :root { --azul-escuro: #0a2f6c; --azul-claro: #eef3fb; --vermelho: #d32f2f; --branco: #ffffff; --preto: #212121; --cinza-borda: #e0e4e9; }
+        .container { max-width: 1280px; margin: 0 auto; background: #0f1a24; border-radius: 48px; padding: 20px; box-shadow: 0 30px 35px rgba(0,0,0,0.5), inset 0 1px 4px rgba(255,255,200,0.1); border: 1px solid var(--vermelho); }
+        .header { display: flex; justify-content: space-between; align-items: center; background: #0a2f6ccc; backdrop-filter: blur(4px); padding: 12px 24px; border-radius: 60px; margin-bottom: 25px; flex-wrap: wrap; gap: 15px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; }
+        .logo-area img { max-height: 50px; width: auto; background: white; border-radius: 12px; padding: 4px; }
+        .logo-area span { font-size: 1.2rem; font-weight: 600; color: #ffec9e; }
+        .title-badge { background: var(--vermelho); color: white; padding: 6px 18px; border-radius: 3rem; font-weight: bold; letter-spacing: 1px; font-size: 0.9rem; }
+        h2 { font-size: 1.8rem; font-weight: 600; color: var(--branco); border-left: 6px solid var(--vermelho); padding-left: 1rem; margin: 2rem 0 1.2rem 0; }
+        h3 { font-size: 1.3rem; font-weight: 600; margin: 1rem 0 0.8rem; color: var(--branco); }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .card { background: var(--branco); border-radius: 24px; padding: 1.2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.2); border: 1px solid var(--cinza-borda); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-4px); border-color: var(--azul-escuro); }
+        .card h4 { color: var(--azul-escuro); font-size: 1.2rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; }
+        .btn-link { background: linear-gradient(135deg, #0a2f6c, #052050); color: white; border: none; padding: 8px 16px; border-radius: 40px; font-weight: 600; cursor: pointer; transition: 0.1s linear; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; margin-top: 0.8rem; }
+        .btn-link:hover { background: var(--vermelho); transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 1px solid var(--azul-escuro); color: var(--azul-escuro); }
+        .btn-outline:hover { background: var(--azul-escuro); color: white; }
+        .agenda-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; background: #1a2a3a; border-radius: 32px; padding: 1rem; }
+        .agenda-col { background: #0f1a24; border-radius: 24px; padding: 1rem; }
+        .agenda-col h3 { color: #ffec9e; border-bottom: 2px solid var(--vermelho); display: inline-block; margin-bottom: 1rem; }
+        .agenda-item { display: flex; gap: 0.8rem; margin: 0.8rem 0; align-items: baseline; }
+        .time { font-weight: 700; color: var(--vermelho); min-width: 70px; }
+        .desc { color: #ddd; }
+        .interaction-badge { background: var(--azul-escuro); color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.7rem; margin-left: 8px; }
+        .material-list { list-style: none; padding-left: 0; }
+        .material-list li { margin: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem; }
+        .material-list i { color: var(--vermelho); width: 24px; }
+        footer { text-align: center; margin-top: 2rem; padding: 1rem; color: #b4c8e0; font-size: 0.8rem; border-top: 1px solid #2c4c6e; }
+        @media (max-width: 700px) { .container { padding: 12px; } .agenda-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo-area">
+            <img src="https://i.ibb.co/0p01LzxB/logo3de.jpg" alt="Logo SEDUC">
+            <span>Robótica Educacional</span>
+        </div>
+        <div class="title-badge">🤖 Formação · 17 de Abril</div>
+    </div>
+
+    <!-- Apresentação -->
+    <div class="card" style="background: #eef3fb; margin-bottom: 1.5rem;">
+        <h2 style="color: var(--azul-escuro); margin-top: 0;">🎯 Por que estamos aqui?</h2>
+        <p style="color: var(--preto); font-size: 1.1rem;">Integrar conceitos de robótica educativa à construção de um protótipo (animatrônico), explorando conteúdos do 1º bimestre da 2ª e 3ª série do Ensino Médio, como <strong>Mecânica e Programação</strong>, para desenvolver habilidades de pensamento computacional, trabalho em equipe e resolução de problemas.</p>
+        <p style="margin-top: 0.5rem;">Neste ano, vamos além da montagem de circuitos: unimos <strong>cultura maker, micro:bit e abordagem STEAM</strong>, integrando à Olimpíada Brasileira de Robótica (OBR). Cada bimestre trabalhamos um projeto completo, aprofundando teoria e prática.</p>
+    </div>
+
+    <!-- Agenda resumida -->
+    <h2>📅 Cronograma da Oficina</h2>
+    <div class="agenda-grid">
+        <div class="agenda-col">
+            <h3>🌅 Manhã</h3>
+            <div class="agenda-item"><span class="time">9h00</span><span class="desc">Abertura e introdução à robótica</span></div>
+            <div class="agenda-item"><span class="time">9h30</span><span class="desc">Programação com micro:bit – Laço FOR e blocos customizados</span></div>
+            <div class="agenda-item"><span class="time">10h15</span><span class="desc">Construção do Pan & Tilt (mecanismo de movimento)</span></div>
+            <div class="agenda-item"><span class="time">11h00</span><span class="desc">Montagem do servo e eixos</span></div>
+            <div class="agenda-item"><span class="time">11h45</span><span class="desc">Encerramento e alinhamento da tarde</span></div>
+        </div>
+        <div class="agenda-col">
+            <h3>🌙 Tarde</h3>
+            <div class="agenda-item"><span class="time">13h00</span><span class="desc">Continuação da montagem – cabeça e mandíbula</span></div>
+            <div class="agenda-item"><span class="time">14h00</span><span class="desc">Encaixe do servo da mandíbula e alavanca</span></div>
+            <div class="agenda-item"><span class="time">15h00</span><span class="desc">Montagem da cauda, patas e base</span></div>
+            <div class="agenda-item"><span class="time">15h45</span><span class="desc">Personalização e criatividade – identidade visual</span></div>
+            <div class="agenda-item"><span class="time">16h30</span><span class="desc">Finalização e compartilhamento</span></div>
+        </div>
+    </div>
+
+    <!-- Programação e conceitos -->
+    <h2>💻 Programação no MakeCode</h2>
+    <div class="card-grid">
+        <div class="card">
+            <h4><i class="fas fa-code"></i>Passo a passo </h4>
+            <p>O que  <strong>precisamos entender</strong> para avançar neste 1° Bimestre.</p>
+            <p><code>Vamos conhecer todos os momentos na estruturação desse  <strong>CODIGO</strong></code></p>
+            <a href="https://1drv.ms/p/c/e074bfd2525fe1d0/IQBTLw59bP2OS7GnnaWkvmHZARJARrsRVB4vDw6fElkuxZ0?e=Bvqhgw" target="_blank" class="btn-link">O que vamos fazer ...</a>
+            <a href="https://drive.google.com/file/d/1C3tWJCZFRfm9LrPy0n3kuTpIS9mXO3Ak/view?usp=drive_link" target="_blank" class="btn-link">Acessar pdf 01</a>
+            <a href="https://docs.google.com/presentation/d/1iwbBUBYS4oanwIxWDxYaQWSe6olIIr_q-h7zOWj2N7I/edit?usp=sharing" target="_blank" class="btn-link">Acessar slide 01</a>
+        </div>
+        <div class="card">
+            <h4><i class="fas fa-code"></i> Laço FOR (repetição)</h4>
+            <p>O comando <strong>for</strong> permite repetir blocos automaticamente. Exemplo: contar de 0 a 4 ou de 4 a 0 com apenas alguns blocos, economizando código.</p>
+            <p><code>for (let índice = 0; índice <= 4; índice++) { basic.showNumber(índice) }</code></p>
+            <a href="https://makecode.microbit.org/" target="_blank" class="btn-link">Acessar MakeCode</a>
+        </div>
+        <div class="card">
+            <h4><i class="fas fa-puzzle-piece"></i> Blocos customizados</h4>
+            <p>Use o link especial: <strong>https://makecode.microbit.org/09496-38599-77395-58646</strong> (ou <a href="https://shorturl.at/grDP5" target="_blank">shorturl.at/grDP5</a>) para carregar blocos personalizados. Eles facilitam o controle do servo e do animatrônico.</p>
+            <a href="https://makecode.microbit.org/09496-38599-77395-58646" target="_blank" class="btn-link"><i class="fas fa-external-link-alt"></i> Abrir projeto</a>
+        </div>
+        <div class="card">
+            <h4><i class="fas fa-microchip"></i> Funções (receitas)</h4>
+            <p>Organize sequências de comandos em funções, reaproveitando e alterando comportamentos de forma centralizada – como modificar uma receita e ver o efeito em todo o código.</p>
+        </div>
+    </div>
+
+    <!-- Materiais necessários -->
+    <h2>🛠️ Materiais e componentes</h2>
+    <div class="card">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1rem;">
+            <div>
+                <h4>Kit de robótica</h4>
+                <ul class="material-list">
+                    <li><i class="fas fa-microchip"></i> Placa micro:bit</li>
+                    <li><i class="fas fa-plug"></i> Shield para micro:bit</li>
+                    <li><i class="fas fa-cogs"></i> 3 servo motores</li>
+                    <li><i class="fas fa-tools"></i> Braços do servo (horn) e parafusos</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Materiais de construção</h4>
+                <ul class="material-list">
+                    <li><i class="fas fa-box"></i> Papelão (aprox. 3mm de espessura)</li>
+                    <li><i class="fas fa-cut"></i> Estilete, tesoura</li>
+                    <li><i class="fas fa-fire"></i> Cola quente + 4 bastões</li>
+                    <li><i class="fas fa-paperclip"></i> Clips de papel (2)</li>
+                    <li><i class="fas fa-wood"></i> Palitos de churrasco (2)</li>
+                    <li><i class="fas fa-screwdriver"></i> Chave Philips pequena</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Moldes impressos</h4>
+                <p>Gabaritos para recorte das peças (Pan & Tilt, cabeça, mandíbula, cauda, patas). Disponíveis no material da formação.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Construção passo a passo -->
+    <h2>🔧 Mão na massa – Construção do Animatrônico (T-Rex)</h2>
+    <div class="card-grid">
+        <div class="card">
+            <h4>1. Pan & Tilt (mecanismo base)</h4>
+            <p>Monte a estrutura que permite rotação (pan) e inclinação (tilt). Recorte as peças, faça vincos e furos. Use cola quente para fixar as camadas. Encaixe o servo motor para criar o eixo de rotação.</p>
+        </div>
+        <div class="card">
+            <h4>2. Eixo e suporte do servo</h4>
+            <p>Insira um pedaço de palito de churrasco para alinhar as camadas. Fixe o braço do servo com parafusos, marcando os furos previamente. Teste o encaixe sem forçar.</p>
+        </div>
+        <div class="card">
+            <h4>3. Cabeça e mandíbula</h4>
+            <p>Cole as camadas da cabeça, insira o limitador de movimento e fixe a mandíbula com palito para alinhamento. Use cola quente apenas nos limitadores para não travar o movimento.</p>
+        </div>
+        <div class="card">
+            <h4>4. Servo da mandíbula e alavanca</h4>
+            <p>Encaixe o servo no suporte, fixe o horn. Com um clipe desamassado, crie uma alavanca conectando o horn ao furo da mandíbula. Ajuste o comprimento do arame.</p>
+        </div>
+        <div class="card">
+            <h4>5. Cauda e patas</h4>
+            <p>Cole as camadas da cauda, fixe no segundo Pan & Tilt na parte traseira do corpo. Cole as patas laterais, alinhando para que fiquem apoiadas no chão.</p>
+        </div>
+        <div class="card">
+            <h4>6. Base e personalização</h4>
+            <p>Cole o protótipo em uma base circular de papelão (18 cm diâmetro). Agora personalize: pinte, adicione detalhes, crie um cenário e dê uma história ao seu dinossauro!</p>
+        </div>
+    </div>
+
+    <!-- Dicas e orientações para formadores -->
+    <div class="card" style="background: #1a2a3a; border-left: 5px solid var(--vermelho);">
+        <h3 style="color: #ffec9e;"><i class="fas fa-chalkboard-user"></i> Vamos replicar ...</h3>
+        <ul style="color: #ddd; margin-left: 1.5rem;">
+            <li><strong>Tempo sugerido:</strong> 2h30 para construção + 30min para personalização.</li>
+            <li><strong>Materiais:</strong> verifique disponibilidade de cola quente, estiletes e baterias para os servos.</li>
+            <li><strong>Programação:</strong> oriente os participantes a testarem o código no simulador antes de carregar na placa.</li>
+            <li><strong>Montagem:</strong> atente para o alinhamento dos furos e a posição do ondulado do papelão nas camadas superiores.</li>
+            <li><strong>Personalização:</strong> incentive a criatividade – cada grupo pode criar uma identidade única para o protótipo.</li>
+        </ul>
+        <div style="margin-top: 0.8rem;">
+            <a href="https://makecode.microbit.org/" target="_blank" class="btn-link"><i class="fab fa-microsoft"></i> MakeCode – micro:bit</a>
+            <a href="https://www.obr.org.br/" target="_blank" class="btn-link" style="margin-left: 0.5rem;"><i class="fas fa-robot"></i> OBR – Olimpíada Brasileira de Robótica</a>
+        </div>
+    </div>
+
+    <!-- Avaliação e cascateamento -->
+    <h2>🔄 Avaliação e continuidade</h2>
+    <div class="card-grid">
+        <div class="card">
+            <h4><i class="fas fa-share-alt"></i> Tutorial de Cascateamento</h4>
+            <p>Orientações para replicar a formação nas escolas.</p>
+            <a href="https://docs.google.com/presentation/d/1519XHXHbZUUv6-l2w1h70FQ9oRLaPK7G/edit?usp=sharing&ouid=101532812359216929017&rtpof=true&sd=true" target="_blank" class="btn-link">Acessar tutorial</a>
+        </div>
+        <div class="card">
+            <h4><i class="fas fa-edit"></i> Avaliação da Formação</h4>
+            <p>Responda ao formulário para contribuir com a melhoria dos próximos encontros.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlwG0kNrthdQbNugGGdNnqYbL_XKdliZymWFPlJFHKJPegBA/viewform?usp=publish-editor" target="_blank" class="btn-link">Responder avaliação</a>
+        </div>
+    </div>
+
+    <div class="card" style="background: #0f1a24; text-align: center;">
+        <p style="color: #b4c8e0;"><i class="fas fa-info-circle"></i> A formação contabiliza para o cascateamento: formados em ações N1 + ações criadas pela URE, formados em N2+N3, formações por componente.</p>
+    </div>
+
+    <footer>
+        <p>Secretaria da Educação do Estado de São Paulo · Unidade Regional de Ensino Caieiras</p>
+        <p>Formação Presencial 2026 – Robótica Educacional · 2ª e 3ª série do Ensino Médio</p>
+    </footer>
+</div>
+</body>
+</html>
